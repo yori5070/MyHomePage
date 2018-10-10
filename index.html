@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>工房Yoriのサイト</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- BootstrapのCSS読み込み -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="myCSS/myStyle.css" rel="stylesheet"> <!-- index.htmlの装飾 -->
+        <link href="myCSS/cadManual.css" rel="stylesheet"> <!-- LibreCAD マニュアルの装飾 -->
+        <link href="myCSS/stick-footer.css" rel="stylesheet"> <!-- フッターのCss -->
+        <!-- jQuery読み込み -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- BootstrapのJS読み込み -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="myJS/accordionList.js"></script>
+        <script src="myJS/mainPage.js"></script>
+        <script>
+        $(function() {
+            $.getJSON("selSide.json" , function(data) {
+                var mainFileName = mkAcoList(data); // 選択リストを作る
+                loadMain(mainFileName); // メインファイルを表示する
+            });           
+        });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="page-header" >
+                <h1>　<strong>&nbsp;工房 <ruby>	
+
+<span style="font-size:120%">賴</span><rt>Yori</rt></ruby>&nbsp;</strong>	
+
+<span style="font-size: 75%">　　趣味で制作したものを紹介します</span></h1>
+            </div>
+            <!--nav>Navi</nav-->
+            <div class="row"> <!-- 左に選択リスト、右にコンテンツ -->
+                <aside id="selList" class="col-md-3 col-lg-2">
+                <!-- 選択リストはselSide.jsonから生成する -->
+                </aside>
+                <article class="col-md-9 col-lg-10">
+                    <div id="main">main</div>
+                </article>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-muted">意見や問い合わせは<a href="mailto:yori5070@yahoo.co.jp">こちら</a>に</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

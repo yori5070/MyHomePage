@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017/07/29, 9:34:21
+    Author     : yori
+*/
+/* 大見出し */
+.sectBox {
+  position: relative;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: whitesmoke;
+  border-top: solid 5px #c2c2c2;
+  border-bottom: solid 5px #c2c2c2; }
+  .sectBox .numSect {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: 5px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #c2c2c2;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0; }
+  .sectBox .sectTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: 500; }
+
+/* 小見出し */
+.titleTool {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-size: 120%;
+  font-weight: bold;
+  color: #232323;
+  background: white;
+  border-left: solid 20px #336633;
+  border-right: solid 20px #336633;
+  border-top: solid 4px #336633;
+  border-bottom: solid 4px #336633; }
+  .titleTool p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 400; }
+
+/* ツールの説明 */
+.commTool {
+  margin: 0px 15px 3.5em 15px;
+  padding: 1em 1em;
+  color: #232323;
+  /*文字色*/
+  background: white;
+  border: solid 1px #336633;
+  /*線*/
+  border-radius: 10px;
+  /*角の丸み*/ }
+  .commTool p {
+    margin: 0;
+    padding: 0; }
+
+/* ツールの呼び出しで主に使うアイコンの装飾 */
+img.iconMenu {
+  width: 1em;
+  height: 1em;
+  border: 0px; }
+
+img.iconDoc {
+  width: 4em;
+  height: 4em;
+  background: ButtonFace;
+  border: 1px ButtonShadow solid;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 0 ButtonShadow; }
+
+img.iconDocMin {
+  width: 1em;
+  height: 1em;
+  background: ButtonFace;
+  border: 1px ButtonShadow solid;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px 0 ButtonShadow;
+  margin: 0 0.2em; }
+
+span.uLine {
+  border-bottom: solid 0.5px #232323; }
+
+/* ツールの呼び出し */
+.callTool {
+  margin: 0 15px; }
+  .callTool thead th {
+    padding-left: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #99cccc;
+    color: white; }
+  .callTool tbody td {
+    padding-left: 1em;
+    background: white; }
+  .callTool tbody td.bBorder {
+    border-bottom: 2px #99cccc solid; }
+  .callTool td.callDocIcon {
+    width: 10em; }
+  .callTool td.otherOper {
+    width: 8em;
+    margin-left: 1em; }
+
+span.keyBorder {
+  border: 1px solid black;
+  padding: 0px 5px;
+  border-radius: 4px;
+  margin: 0 0.2em; }
+
+/* ツールの操作例 */
+.operTool {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 2px #99cccc;
+  border-radius: 8px;
+  background: white; }
+  .operTool ::before {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 16px;
+    background: white;
+    color: #232323;
+    font-weight: bold;
+    content: "例"; }
+  .operTool .operTitle {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #2c2c2f;
+    border-bottom: solid 3px #c2c2c2; }
+  .operTool .operImg {
+    text-align: center; }
+    .operTool .operImg .cadImg {
+      width: 238px;
+      height: 131px;
+      border: 1px black ButtonShadow; }
+  .operTool p {
+    margin: 0;
+    padding: 0; }
+
+/*# sourceMappingURL=cadManual.css.map */

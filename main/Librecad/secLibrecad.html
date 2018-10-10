@@ -1,0 +1,61 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <font size="+2">２次元ＣＡＤ LibreCAD のセクション</font>
+    </div>
+    <div class="panel-body">
+        <div class="media">
+            <!-- 1.画像の配置 -->
+            <a class="media-left" href="#">
+                <img class="media-object img-thumbnail img-responsive" src="./myIMG/LibreCAD/LibreCAD_2_10.png" alt="LibreCAD ver2.10">
+            </a>
+            <!-- 2.画像の説明 -->
+            <div class="media-body panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">（予定）LibreCAD操作マニュアル　--- 2017年７月 ---</h4>
+                </div>
+                <div class="panel-body" style="margin-top:0px;">
+                    <p>　LibreCAD は、公開予定の Ver.2.10 となって操作性などはかなり向上しています。</p>
+                    <p>　ビルドした Ver.2.10 の操作マニュアルを掲載する予定です。</p>
+                </div>
+            </div>    
+        </div>
+        <hr />
+        <div class="media">
+            <!-- 1.画像の配置 -->
+            <a class="media-left" href="#">
+                <img class="media-object img-thumbnail img-responsive" src="./myIMG/LibreCAD/libreCAD3_Open.jpg" alt="LibreCAD3オープン画面">
+            </a>
+            <!-- 2.画像の説明 -->
+            <div class="media-body panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">LibreCAD ３ をコンパイルしてみました　--- 2017年６月 ---</h4>
+                </div>
+                <div class="panel-body" style="margin-top:0px;">
+                    <p>　librecad 3 を試行錯誤のすえにコンパイルすることができました。LibreCAD ３ は BRL-CAD （3次元CAD）のユーザーインターフェイスとして開発されています。まだまだ完成には程遠いようです。</p>
+                    <p>　 <a href='https://github.com/LibreCAD/LibreCAD_3' target="blank">https://github.com/LibreCAD/LibreCAD_3</a> に書かれているとおりに LinuxMint でコンパイルするための環境をつくります。</p>
+                    <p>　まずライブラリを導入します（apt-get install qttools5-dev qttools5-dev-tools libqt5opengl5-dev liblua5.2-dev git g++ gcc-4.8 libcairo2-dev liblog4cxx10-dev libpango-1.0-0 libpango1.0-dev libboost-all-dev libqt5svg5 libgtest-dev libeigen3-dev libcurl4-gnutls-dev）。</p>
+                    <p>　さらに「You need to compile Google Test in /usr/src/gtest/ and move the libraries in /usr/lib/」と書かれているますので、/usr/src/gtest にある Google Test をコンパイル（cd /usr/src/gtest/src; sudo cmake ..; make）し、ビルドできたライブラリ *.a を /usr/lib/ にコピーします。</p>
+                    <p>　環境ができたら、LibDxfRW のソースを github からソースを clone、コンパイルてインストール。</p>
+                    <p>　そして本体の LibreCAD のソースを clone し,コンパイルします。</p>
+                </div>
+            </div>    
+        </div>
+        <hr />
+        <div class="media">
+            <!-- 1.画像の配置 -->
+            <a class="media-left" href="#">
+                <img class="media-object img-thumbnail img-responsive" src="./myIMG/LibreCAD/libreCAD3_Open.jpg" alt="LibreCAD3オープン画面">
+            </a>
+            <!-- 2.画像の説明 -->
+            <div class="media-body panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">LibreCAD ３ を起動時のエラー　--- 2018年９月 ---</h4>
+                </div>
+                <div class="panel-body" style="margin-top:0px;">
+                    <p>　起動時にエラーは、環境変数に「QT_STYLE_OVERRIDE=gtk2」をセットすることで解決。</p>
+                </div>
+            </div>    
+        </div>
+        <hr />
+    </div>
+</div>

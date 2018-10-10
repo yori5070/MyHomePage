@@ -1,0 +1,755 @@
+<div class='sectBox'>
+<span class='numSect'>３−１</span><p class='sectTitle'>直線を書く</p><div class='titleTool'>
+<p>３−１−１　２点を結ぶ線分</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール（座標の指定方法については別記）。</p><p>　連続して線分を書くことができ、始点 x1,y1 終点 x2,y2 の線分を書いた後、終点 x2,y2 は自動的に次の始点となる。次の終点 x3,y3 を指定すれば、始点 x2,y2 と終点 x3,y3 を結ぶ直線が書ける。終点 x3,y3 は、自動的に次の始点となる・・・。close と入力すれば x1,y1 が自動的に終点となり、閉じた線分が書かれる。</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_2p.svg' name='アイコン 線分' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_2p.svg' name='アイコン 線分' class='iconMenu'/>%線分(<span class='uLine'>2</span>)</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_2p.svg' name='アイコン 線分' class='iconMenu'/>%線分(<span class='uLine'>2</span>)</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>line&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　li または l ）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+座標 0,0 から 座標 50,100 に直線を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li><span class='keyBorder'>Space</span>キーを押してコマンド入力に切り替える</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （始点を指定）</li><li>50,100 <span class='keyBorder'>&#x23CE;</span> を入力 （終点を指定、改行で線分を記述）</li><li><span class='keyBorder'>Esc</span> <span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_2p_01.png' name='線分_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+クリックされた任意の座標を始点として、一辺の長さが 50 の正方形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>マウスをクリック （任意の始点）</li><li><span class='keyBorder'>Space</span>キーを押してコマンド入力に切り替える</li><li>@0,50 <span class='keyBorder'>&#x23CE;</span> を入力（相対座標で終点を指定）</li><li>@50,0 <span class='keyBorder'>&#x23CE;</span> を入力（相対座標で次の終点を指定）</li><li>@0,-50 <span class='keyBorder'>&#x23CE;</span> を入力（相対座標で次の終点を指定）</li><li>close <span class='keyBorder'>&#x23CE;</span> を入力（線分を閉じる）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_2p_02.png' name='線分_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−２　角度と長さを指定した線</p>
+</div>
+<div class='commTool'><p>　角度と長さを指定した直線を座標 x,y に書くツール。</p><p>　座標 x,y は始点、終点もしくは中点（線の中間）に指定することができる。</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_angle.svg' name='アイコン 角度指定線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_angle.svg' name='アイコン 角度指定線' class='iconMenu'/>角度指定線(<span class='uLine'>A</span>)</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_angle.svg' name='アイコン 角度指定線' class='iconMenu'/>角度指定線(<span class='uLine'>A</span>)</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>（なし）</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 で、角度 30°、60°、90°の線を書く（場所は任意）
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力</li><li>メニューバーの 角度 に 30 を入力、任意の位置でマウスをクリック</li><li>メニューバーの 角度 に 60 を入力、任意の位置でマウスをクリック</li><li>メニューバーの 角度 に 90 を入力、任意の位置でマウスをクリック</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_angle_01.png' name='角度指定線_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+角度 45°で、長さ 30、50、80 の線を書く（場所は任意）
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 角度 に 45 を入力</li><li>メニューバーの 長さ に 30 を入力、任意の位置でマウスをクリック</li><li>メニューバーの 長さ に 50 を入力、任意の位置でマウスをクリック</li><li>メニューバーの 長さ に 80 を入力、任意の位置でマウスをクリック</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_angle_02.png' name='角度指定線_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−３　長さを指定した水平線</p>
+</div>
+<div class='commTool'><p>　長さを指定した水平線を座標 x,y に書くツール。</p><p>　座標 x,y は始点、終点もしくは中点（線の中間）に指定することができる。</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_horizontal.svg' name='アイコン 水平線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_horizontal.svg' name='アイコン 水平線' class='iconMenu'/>水平線(<span class='uLine'>H</span>)</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_horizontal.svg' name='アイコン 水平線' class='iconMenu'/>水平線(<span class='uLine'>H</span>)</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>horizontal&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　hor）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の水平線を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_horizontal_01.png' name='水平線_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で水平線を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@0,30 <span class='keyBorder'>&#x23CE;</span> を入力（縦に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@0,30 <span class='keyBorder'>&#x23CE;</span> を入力（縦に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_horizontal_02.png' name='水平線_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−４　長さを指定した垂直線</p>
+</div>
+<div class='commTool'><p>　長さを指定した垂直線を座標 x,y に書くツール。</p><p>　座標 x,y は始点、終点もしくは中点（線の中間）に指定することができる。</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_vertical.svg' name='アイコン 垂直線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_vertical.svg' name='アイコン 垂直線' class='iconMenu'/>垂直線</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_vertical.svg' name='アイコン 垂直線' class='iconMenu'/>垂直線</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>vertical&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　ver）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の垂直線を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='垂直線_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で垂直線を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='垂直線_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−５　２点を指定した矩形</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_rectangle.svg' name='アイコン 矩形' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_rectangle.svg' name='アイコン 矩形' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_rectangle.svg' name='アイコン 矩形' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−６　指定した線との平行線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_parallel_p.svg' name='アイコン 指定線との平行線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_parallel_p.svg' name='アイコン 指定線との平行線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_parallel_p.svg' name='アイコン 指定線との平行線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−７　間隔を指定した平行線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_parallel.svg' name='アイコン 平行線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_parallel.svg' name='アイコン 平行線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_parallel.svg' name='アイコン 平行線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−８　２等分線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_bisector.svg' name='アイコン 角の２等分線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_bisector.svg' name='アイコン 角の２等分線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_bisector.svg' name='アイコン 角の２等分線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−９　指定した始点と円弧を結ぶ接線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_tangent_pc.svg' name='アイコン 接線（始点と円弧）' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_tangent_pc.svg' name='アイコン 接線（始点と円弧）' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_tangent_pc.svg' name='アイコン 接線（始点と円弧）' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１０　指定した２つの円弧を結ぶ接線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_tangent_cc.svg' name='アイコン 接線（２つの円弧）' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_tangent_cc.svg' name='アイコン 接線（２つの円弧）' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_tangent_cc.svg' name='アイコン 接線（２つの円弧）' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１１　指定した線から、指定した円弧に接する垂線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_tangent_perpendicular.svg' name='アイコン 円弧に接する垂線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_tangent_perpendicular.svg' name='アイコン 円弧に接する垂線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_tangent_perpendicular.svg' name='アイコン 円弧に接する垂線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１２　指定した線に直行する線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_perpendicular.svg' name='アイコン 直交線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_perpendicular.svg' name='アイコン 直交線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_perpendicular.svg' name='アイコン 直交線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１３　指定した線に指定した角度で交差する線を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_relative_angle.svg' name='アイコン 交差線' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_relative_angle.svg' name='アイコン 交差線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_relative_angle.svg' name='アイコン 交差線' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１４　中心と頂点を指定して多角形を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_polygon_cen_cor.svg' name='アイコン 多角形、中心・頂点' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cen_cor.svg' name='アイコン 多角形、中心・頂点' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cen_cor.svg' name='アイコン 多角形、中心・頂点' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１５　中心と辺の中央（内接円の接点）を指定して多角形を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_polygon_cen_tan.svg' name='アイコン 多角形、中心・辺の中央' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cen_tan.svg' name='アイコン 多角形、中心・辺の中央' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cen_tan.svg' name='アイコン 多角形、中心・辺の中央' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='titleTool'>
+<p>３−１−１６　２つの頂点（辺の端点）を指定して多角形を書く</p>
+</div>
+<div class='commTool'><p>　始点 x1,y1 終点 x2,y2 のように、指定される座標上の２点を結ぶ直線を書くツール。</p><p>　（注記：描画した結果はポリラインになっており、ここの辺を操作したい時にはポリライン分解（後に記述）が必要になる）</p></div>
+<div class='callTool'>
+<table width='100%'><thead>
+<tr>
+<th>アイコン</th>
+<th colspan='2'>ドックウィジット以外の選択</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class='callDocIcon bBorder' rowspan='3'><img src='./myIMG/LibreCAD/icons/line_polygon_cor_cor.svg' name='多角形、２つの頂点' class='iconDoc'/></td>
+<td class='otherOper'>ツールバー：</td>
+<td><h4><img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>&#9662;　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cor_cor.svg' name='多角形、２つの頂点' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td>メニュー：</td>
+<td><h4>ツール(<span class='uLine'>T</span>)　→　<img src='./myIMG/LibreCAD/icons/line.svg' name='アイコン 直線' class='iconMenu'/>直線(<span class='uLine'>L</span>)　→　<img src='./myIMG/LibreCAD/icons/line_polygon_cor_cor.svg' name='多角形、２つの頂点' class='iconMenu'/>矩形</h4></td>
+</tr>
+<tr><td class='bBorder'>コマンド：</td>
+<td class='bBorder'><h4>rectangle&nbsp;&nbsp;&nbsp;<font size='3'>（短縮コマンド　rect または rec）</font></h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50 の矩形を座標 0,0 書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>0,0 <span class='keyBorder'>&#x23CE;</span> を入力 （座標を指定）</li><li><span class='keyBorder'>Esc</span> （操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_01.png' name='矩形_例１' class='cadImg'/>
+</div>
+</div></div><div class='col-md-6'>
+<div class='operTool'><div class='operTitle'>
+長さ 50、縦間隔 30、始点、終点、中点で矩形を書く
+</div>
+<ol><li>ドックウィジットの%DOC_ICON_MINをクリック</li><li>メニューバーの 長さ に 50 を入力、</li><li>メニューバーの 座標交点 に 始点 を選択</li><li>任意の位置でマウスをクリック</li><li>メニューバーの 座標交点 に 終点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li>メニューバーの 座標交点 に 中点 を選択</li><li>座標指示 テキストボックスでクリック（入力切替）</li><li>@30,0 <span class='keyBorder'>&#x23CE;</span> を入力（横に 30 座標を移動）</li><li><span class='keyBorder'>Esc</span>（操作を終了）</li></ol>
+<div class='operImg'>
+<img src='./myIMG/LibreCAD/window/line_vertical_02.png' name='矩形_例２' class='cadImg'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>

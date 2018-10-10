@@ -1,0 +1,207 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017/07/29, 9:34:21
+    Author     : yori
+*/
+$color01: #c2c2c2;
+$color02: #99cccc;
+$color03: #336633;
+
+$sectionBorder: $color01; // セクションのボーダー色
+$sectionBG:whitesmoke; // セクションの背景色
+$subsecBorder: $color03; // サブセクションのボーダー色
+$subsecBG:white; // サブセクションの背景色
+$commBorder: $color03; // 解説のボーダー色
+$commBG: white; // 解説の背景色
+$callBorder: $color02; // 呼び出しのボーダー色
+$callBG: white; // 呼び出しの背景色
+$operBorder: $color02; // 操作例のボーダー色
+$operBG: white; // 操作例の背景色
+$operUL: $color01; // 操作例の下線色
+$fontColor: #232323;
+
+/* 大見出し */
+.sectBox {
+    position: relative;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background: $sectionBG;
+    border-top: solid 5px $sectionBorder;
+    border-bottom: solid 5px $sectionBorder;
+
+    .numSect {
+        position: absolute;
+        display: inline-block;
+        top: -27px;
+        left: 5px;
+        padding: 0 9px;
+        height: 25px;
+        line-height: 25px;
+        vertical-align: middle;
+        font-size: 17px;
+        background: $sectionBorder;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px 5px 0 0;
+    }
+    .sectTitle {
+        margin: 0; 
+        padding: 0;
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
+
+/* 小見出し */
+.titleTool{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-size: 120%;
+    font-weight: bold;
+    color: $fontColor;
+    background: $subsecBG;
+    border-left: solid 20px $subsecBorder;
+    border-right: solid 20px $subsecBorder;
+    border-top: solid 4px $subsecBorder;
+    border-bottom: solid 4px $subsecBorder;
+    p{
+        margin: 0; 
+        padding: 0;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+}
+
+
+/* ツールの説明 */
+.commTool{
+    margin: 0px 15px 3.5em 15px;
+    padding: 1em 1em;
+    color: $fontColor;/*文字色*/
+    background: $commBG;
+    border: solid 1px $commBorder;/*線*/
+    border-radius: 10px;/*角の丸み*/
+
+    p {
+        margin: 0; 
+        padding: 0;
+    }
+}
+
+/* ツールの呼び出しで主に使うアイコンの装飾 */
+$face:ButtonFace;
+$shadow:ButtonShadow;
+
+img.iconMenu{ // メニュー装飾アイコン
+              width:1em;
+              height:1em;
+              border: 0px;
+}
+img.iconDoc{ // ドックウィジットのアイコン
+             width: 4em;
+             height: 4em;
+             background: $face;
+             border: 1px $shadow solid;
+             border-radius: 4px;
+             box-shadow:2px 2px 2px 0 $shadow;
+}
+img.iconDocMin{ // 文中でドックウィジットアイコンを使うときに用いる
+                width: 1em;
+                height: 1em;
+                background: $face;
+                border: 1px ButtonShadow solid;
+                border-radius: 2px;
+                box-shadow:1px 1px 1px 0 $shadow;
+                margin: 0 0.2em;
+}
+span.uLine{ // 文字の下にアンダーライン
+            border-bottom: solid 0.5px $fontColor;
+}
+
+/* ツールの呼び出し */
+.callTool{
+    margin: 0 15px;
+    thead{
+        th{
+            padding-left: 1em;
+            //border-top: 3px $callBorder solid;
+            //border-bottom: 3px $callBorder solid;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background: $callBorder;
+            color: white;
+        }
+
+    }
+    tbody{
+        td {
+            padding-left: 1em;
+            background: white;
+        }
+        td.bBorder{
+            border-bottom: 2px $callBorder solid;
+        }  
+    }
+    td.callDocIcon{ // ドックウィジットアイコンを置く枠
+                    width: 10em;
+    }
+    td.otherOper{ // 他の呼び出し方の枠
+                  width:8em;
+                  margin-left:1em;
+    }
+    // 他の呼び出し方詳細は定義しない
+}
+
+// ツールの操作例で使うキーの装飾
+span.keyBorder{
+    border: 1px solid black;
+    padding: 0px 5px;
+    border-radius: 4px;
+    margin: 0 0.2em;
+}
+
+/* ツールの操作例 */
+.operTool{
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 2px $operBorder;
+    border-radius: 8px;
+    background: $operBG;
+    ::before {
+        position: absolute;
+        display: inline-block;
+        top: -13px;
+        left: 10px;
+        padding: 0 9px;
+        line-height: 1;
+        font-size: 16px;
+        background: $operBG;
+        color:$fontColor; // #95ccff;
+        font-weight: bold;
+        content: "例";
+    }
+    .operTitle{
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        color: #2c2c2f;
+        border-bottom: solid 3px $operUL;
+    }
+    .operImg{
+        text-align: center;
+        .cadImg {
+            width: 238px;
+            height: 131px;
+            border: 1px black ButtonShadow;
+        }
+    }
+    p {
+        margin: 0; 
+        padding: 0;
+    }
+
+}

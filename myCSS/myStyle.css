@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017/07/03, 9:15:03
+    Author     : yori
+*/
+@font-face {
+  font-family: HentaiKana;
+  src: url("../myFonts/UniHentaiKana-Regular.woff") format("woff"); }
+.media-object {
+  width: 200px; }
+
+.listSelect[active='true'] {
+  color: #003399; }
+
+.page-header {
+  background-image: url("../myIMG/background01.jpg");
+  background-size: cover;
+  height: 120px;
+  position: relative; }
+  .page-header > h1 {
+    position: absolute;
+    top: 30%;
+    margin-top: -1.0rem; }
+    .page-header > h1 > strong {
+      background: linear-gradient(transparent 60%, #ffff95 40%);
+      transform: rotate(-3deg);
+      display: inline-block;
+      text-shadow: 1px 1px 1px #000, -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white; }
+    .page-header > h1 > small {
+      color: black;
+      text-shadow: 1px 1px 1px white; }
+
+/*
+**　スピーカーセクションで使う mixin
+*/
+/*
+**　スピーカーの冒頭ページ
+*/
+#spIntro .imgBox {
+  width: 150px;
+  height: 120px;
+  padding: 5px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block; }
+  #spIntro .imgBox > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle; }
+
+/*
+**　スピーカーの製作工程
+*/
+#spMaking {
+  /* スピーカーセクション（１）　はじめにを記述 */
+  /* スピーカーセクション（２）　図面おこしを記述*/
+  /* スピーカーセクション（３）　切断・追加工を記述*/
+  /* スピーカーセクション（４）　組立について記述*/ }
+  #spMaking .section_02 {
+    padding-top: 1em; }
+    #spMaking .section_02 .subCont {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em; }
+  #spMaking .section_03 {
+    padding-top: 1em; }
+    #spMaking .section_03 .cope .header {
+      padding: 0 0 1em 1em;
+      font-size: 140%; }
+    #spMaking .section_03 .cope p {
+      padding-left: 2em;
+      font-size: 120%; }
+    #spMaking .section_03 .subCont {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em; }
+      #spMaking .section_03 .subCont .imgList {
+        padding: 1.5em 1em; }
+        #spMaking .section_03 .subCont .imgList p {
+          font-size: 120%; }
+        #spMaking .section_03 .subCont .imgList .box {
+          float: left;
+          width: 180px;
+          height: 265px;
+          padding: 0 15px; }
+          #spMaking .section_03 .subCont .imgList .box img {
+            width: 150px;
+            height: auto; }
+        #spMaking .section_03 .subCont .imgList .br {
+          clear: both; }
+  #spMaking .section_04 {
+    padding-top: 1em; }
+
+/*
+**　スリムゴンの製作
+*/
+#slimgon {
+  /* スピーカーセクション（１）　はじめにを記述 */ }
+  #slimgon .section_01, #slimgon .section_02, #slimgon .section_03 {
+    padding-top: 1em; }
+    #slimgon .section_01 .cope .header, #slimgon .section_02 .cope .header, #slimgon .section_03 .cope .header {
+      padding: 0 0 1em 1em;
+      font-size: 140%; }
+    #slimgon .section_01 .cope p, #slimgon .section_02 .cope p, #slimgon .section_03 .cope p {
+      padding-left: 2em;
+      font-size: 120%; }
+    #slimgon .section_01 .subCont, #slimgon .section_02 .subCont, #slimgon .section_03 .subCont {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em; }
+      #slimgon .section_01 .subCont .imgList, #slimgon .section_02 .subCont .imgList, #slimgon .section_03 .subCont .imgList {
+        padding: 1.5em 1em; }
+        #slimgon .section_01 .subCont .imgList p, #slimgon .section_02 .subCont .imgList p, #slimgon .section_03 .subCont .imgList p {
+          font-size: 120%; }
+        #slimgon .section_01 .subCont .imgList .box, #slimgon .section_02 .subCont .imgList .box, #slimgon .section_03 .subCont .imgList .box {
+          float: left;
+          width: 180px;
+          height: 265px;
+          padding: 0 15px; }
+          #slimgon .section_01 .subCont .imgList .box img, #slimgon .section_02 .subCont .imgList .box img, #slimgon .section_03 .subCont .imgList .box img {
+            width: 150px;
+            height: auto; }
+        #slimgon .section_01 .subCont .imgList .br, #slimgon .section_02 .subCont .imgList .br, #slimgon .section_03 .subCont .imgList .br {
+          clear: both; }
+
+/*# sourceMappingURL=myStyle.css.map */

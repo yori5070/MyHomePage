@@ -1,0 +1,154 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017/07/03, 9:15:03
+    Author     : yori
+*/
+//@import "compass";
+// 変体仮名を使うための設定
+@font-face {
+	font-family:HentaiKana ;
+	src: url('../myFonts/UniHentaiKana-Regular.woff') format('woff') ;
+}
+//body {
+//	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,HentaiKana;
+//}
+.media-object {
+    width: 200px;
+}
+.listSelect[active='true'] {
+    color: #003399;
+}
+// ヘッダーに追加のCSS
+$stroke-color: white;
+.page-header {
+    background-image: url('../myIMG/background01.jpg');
+    background-size: cover;
+    height:120px;
+    position: relative;
+    > h1 { position: absolute; top: 30%; margin-top: -1.0rem;
+           > strong {
+               background: linear-gradient(transparent 60%, #ffff95 40%);
+               transform: rotate(-3deg);
+               display: inline-block;
+               text-shadow: 1px 1px 1px #000, -1px 1px 1px $stroke-color, 1px -1px 1px $stroke-color, -1px -1px 1px $stroke-color;
+           }
+           > small {
+               color: black;
+               text-shadow: 1px 1px 1px $stroke-color;
+           }
+    }
+}
+/*
+**　スピーカーセクションで使う mixin
+*/
+@mixin subImgBox() {
+    .subCont {
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        // 画像と簡易解説
+        .imgList {
+            padding: 1.5em 1em;
+            p {
+                font-size: 120%;
+            }
+            .box {
+                float:left;
+                width: 180px;
+                height: 265px;
+                padding: 0 15px;
+                img {
+                    width: 150px; 
+                    height: auto;
+                }
+            }
+            .br {
+                clear:both;
+            }
+        }
+    }
+}
+/*
+**　スピーカーの冒頭ページ
+*/
+#spIntro {
+    //　イメージの横並び
+    $secImgPad: 5px;
+    .imgBox {
+        width: 150px; height: 120px;
+        padding: $secImgPad;
+        display:table-cell;
+        text-align:center;
+        vertical-align:middle;
+        display: inline-block;
+        > img {
+            width:auto; height:auto; max-width:100%; max-height:100%;
+            vertical-align:middle;
+        }   
+    }
+}
+/*
+**　スピーカーの製作工程
+*/
+#spMaking {
+    /* スピーカーセクション（１）　はじめにを記述 */
+    .section_01 {
+    }
+    /* スピーカーセクション（２）　図面おこしを記述*/
+    .section_02 {
+        padding-top: 1em;
+        //　サブコンテンツの余白　図面を示す部分の余白
+        .subCont {
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+    /* スピーカーセクション（３）　切断・追加工を記述*/
+    .section_03 {
+        padding-top: 1em;
+        //　「誤差への対策」の書式
+        .cope {
+            .header {
+                padding: 0 0 1em 1em;
+                font-size: 140%;
+            }
+            p {
+                padding-left: 2em;
+                font-size: 120%;
+            }
+        }
+        //　サブコンテンツの余白　「補足」を記述する部分の余白
+        @include subImgBox();
+    }
+    /* スピーカーセクション（４）　組立について記述*/
+    .section_04 {
+        padding-top: 1em;
+    }
+}
+/*
+**　スリムゴンの製作
+*/
+#slimgon {
+    /* スピーカーセクション（１）　はじめにを記述 */
+    .section_01, .section_02, .section_03 {
+        padding-top: 1em;
+        //　「誤差への対策」の書式
+        .cope {
+            .header {
+                padding: 0 0 1em 1em;
+                font-size: 140%;
+            }
+            p {
+                padding-left: 2em;
+                font-size: 120%;
+            }
+        }
+        //　サブコンテンツの余白　「補足」を記述する部分の余白
+        @include subImgBox();
+    }
+}
