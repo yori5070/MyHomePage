@@ -104,6 +104,7 @@ alias pbpaste='xsel --clipboard --output'</pre></p>
             <li>　次に、ディレクトリ DvdVideo にオーサリングしたファイルを書き込む。コマンドラインから　<strong>dvdauthor -o DvdVideo -tf output.mpg</strong>　、つぎに　<strong>dvdauthor -o DvdVideo -T</strong>　で完了。</li>
             <li>　オーサリングしたファイルを DVD-R に書き込むため、コマンドラインから　<strong>genisoimage -dvd-video -o dvd.iso DvdVideo</strong>　でイメージファイルにする。</li>
             <li>　k3b など（任意の書き込みツール）で 、イメージ（dvd.iso）を DVD-R に焼く。以上で完了。</li>
+            <li>　（補： コマンドでイメージをファイルをDVD-Rに焼くには、空のDVD-Rをセットし <strong>growisofs -dvd-compat -Z /dev/dvd=dvd.iso</strong> を実行する。）</li>
         </ol>
     </div>
     <div class="panel-body" style="margin-top:0px;">
