@@ -1,33 +1,36 @@
 [
   {"section":"スピーカー","secDir":"Speaker", "secFile":"secSpeaker","data":[
-    {"name":"制作したもの一覧"},
-    {"name":"スピーカー製作工程","contFile":"making"},
-    {"name":"スリムゴンの製作","contFile":"makeSlimGon"}
-    ]
+          {"name":"制作したもの一覧"},
+          {"name":"スピーカー製作工程","contFile":"making"},
+          {"name":"スリムゴンの製作","contFile":"makeSlimGon"}
+      ]
   },
   {"section":"アンプ","secDir":"amp","data":[
-    {"name":"プリアンプ","contFile":"priAmp01"},
-    {"name":"パワーアンプ","contFile":"powerAmp01"}
-    ]
+          {"name":"プリアンプ","contFile":"priAmp01"},
+          {"name":"パワーアンプ","contFile":"powerAmp01"}
+      ]
   },
   {"section":"Librecad","secDir":"Librecad","secFile":"secLibrecad","data":[
-    {"name":"はじめに","contFile":"00_intro"},
-    {"name":"１，基本的な操作","contFile":"01_basic"},
-    {"name":"２，設定","contFile":"02_option"},
-    {"name":"３−１，直線を書く","contFile":"0301_line"}    
-    ]
+          {"name":"はじめに","contFile":"00_intro"},
+          {"name":"１，基本的な操作","contFile":"01_basic"},
+          {"name":"２，設定","contFile":"02_option"},
+          {"name":"３−１，直線を書く","contFile":"0301_line"}
+      ]
   },  
   {"section":"自費出版本","data":[
-    ]
+      ]
   },
   {"section":"DIY","secDir":"DIY","data":[
-    {"name":"小Ｂ６版、Ｂ６版 ラック","contFile":"B6m_Rack"}
-]
+          {"name":"小Ｂ６版、Ｂ６版 ラック","contFile":"B6m_Rack"}
+      ]
   },
   {"section":"工具の紹介","secDir":"myTools","data":[
-    ]
+      ]
   },
   {"section":"覚え書き","secDir":"myMemo","data":[
-    ]
+          {"name":"地域で","contFile":"00_myLife"},
+          {"name":"コマンド操作","contFile":"01_command"},
+          {"name":"このサイトの構造","contFile":"02_mySite"}
+      ]
   }
 ]
