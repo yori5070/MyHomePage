@@ -28,7 +28,7 @@
       ]
   },
   {"section":"覚え書き","secDir":"myMemo","data":[
-          {"name":"地域で","contFile":"00_myLife"},
+          {"name":"そのほか","contFile":"00_myLife"},
           {"name":"コマンド操作","contFile":"01_command"},
           {"name":"このサイトの構造","contFile":"02_mySite"}
       ]
